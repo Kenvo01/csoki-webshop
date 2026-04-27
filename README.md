@@ -12,8 +12,8 @@ Navbar: A cég logója, különbözző oldalak linkje, kosár ikon, mionden olda
 
 Funkciólista
 
-Bemutatkozó szöveg 
-Elérhetőségek és kapcsolati információk 
+Bemutatkozó szöveg; 
+Elérhetőségek és kapcsolati információk;
 Reszponzív kialakítás
 
 Feladatmegosztás
