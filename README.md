@@ -17,6 +17,7 @@ Elérhetőségek és kapcsolati információk
 Reszponzív kialakítás
 
 Feladatmegosztás
+
 Soós Milán: végső ellenőrzés, Frontend fejlesztés, Backend fejlesztés, szöveg írása, képek készítése, UX design, tesztelés
 Pál Gréti: Frontend fejlesztés, szöveg írása, képek készítése, UI/UX design
 
