@@ -1,8 +1,6 @@
-// Univerzális kosárba tétel függvény
 function addToCart(name, price, imgSrc) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     
-    // Megnézzük, benne van-e már a termék
     const existingProduct = cart.find(item => item.name === name);
 
     if (existingProduct) {
@@ -19,24 +17,38 @@ function addToCart(name, price, imgSrc) {
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(name + ' hozzáadva a kosárhoz!');
     
-    // Ha a kosár oldalon lennénk és ott is van ilyen gomb, frissítsük a nézetet
     if (typeof renderCart === "function") {
         renderCart();
     }
 }
 
-// A többi függvényed (renderCart, changeQuantity) változatlan maradhat
 function renderCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const emptyDiv = document.querySelector('.kosaram-empty');
     const itemsDiv = document.getElementById('kosaram-items');
     
+    const checkoutBtn = document.querySelector('.kosaram-buttons button');
+    
     if (emptyDiv && itemsDiv) {
         itemsDiv.innerHTML = '';
+        
         if (cart.length === 0) {
             emptyDiv.style.display = 'block';
+            
+            if (checkoutBtn) {
+                checkoutBtn.disabled = true;
+                checkoutBtn.style.opacity = '0.5';
+                checkoutBtn.style.cursor = 'not-allowed';
+            }
         } else {
             emptyDiv.style.display = 'none';
+            
+            if (checkoutBtn) {
+                checkoutBtn.disabled = false;
+                checkoutBtn.style.opacity = '1';
+                checkoutBtn.style.cursor = 'pointer';
+            }
+
             let total = 0;
             cart.forEach(item => {
                 const itemTotal = item.price * item.quantity;
@@ -77,6 +89,10 @@ function changeQuantity(name, delta) {
         localStorage.setItem('cart', JSON.stringify(cart));
         renderCart();
     }
+}
+
+function fizetesUzenet() {
+    alert("A fizetés még nem elérhető!");
 }
 
 document.addEventListener('DOMContentLoaded', renderCart);
