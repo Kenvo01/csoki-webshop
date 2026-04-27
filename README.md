@@ -19,6 +19,7 @@ Reszponzív kialakítás
 Feladatmegosztás
 
 Soós Milán: végső ellenőrzés, Frontend fejlesztés, Backend fejlesztés, szöveg írása, képek készítése, UX design, tesztelés
+
 Pál Gréti: Frontend fejlesztés, szöveg írása, képek készítése, UI/UX design
 
 Technikai megvalósítás Frontend: HTML5, CSS, (van Bootstrap 5). CSS: projekt stílusok a style.css fájlban. JS könyvtárak: Bootstrap bundle + egyedi JS a kosárhoz.
